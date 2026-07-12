@@ -1,63 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Ticket Booking Form</title>
-</head>
-<body>
+<?php  
+if(isset($_POST['submit']))  
+{  
+    echo "<h3>Ticket Booked Successfully</h3>";  
+    echo "Name: " . $_POST['name'] . "<br>";  
+    echo "Age: " . $_POST['age'] . "<br>";  
+    echo "Destination: " . $_POST['destination'] . "<br>";  
+}  
+?>  <!DOCTYPE html>  <html>  
+<head>  
+    <title>Ticket Booking</title>  
+</head>  
+<body>  <h2>Ticket Booking Form</h2>  <form method="post">  
+    Name:  
+    <input type="text" name="name"><br><br>  Age:  
+<input type="number" name="age"><br><br>  
 
-<center>
+Destination:  
+<select name="destination">  
+    <option>Chennai</option>  
+    <option>Bangalore</option>  
+    <option>Hyderabad</option>  
+</select><br><br>  
 
-<h2>Ticket Booking Form</h2>
+<input type="submit" name="submit" value="Book Ticket">
 
-<form>
-
-<table border="1" cellpadding="8">
-
-<tr>
-    <th>Field</th>
-    <th>Details</th>
-</tr>
-
-<tr>
-    <td>Name</td>
-    <td><input type="text"></td>
-</tr>
-
-<tr>
-    <td>Age</td>
-    <td><input type="number" min="1"></td>
-</tr>
-
-<tr>
-    <td>Destination</td>
-    <td>
-        <select>
-            <option>Chennai</option>
-            <option>Bangalore</option>
-            <option>Hyderabad</option>
-        </select>
-    </td>
-</tr>
-
-<tr>
-    <td>Class</td>
-    <td>
-        <input type="radio" name="class"> AC
-        <input type="radio" name="class"> Sleeper
-    </td>
-</tr>
-
-<tr>
-    <td colspan="2" align="center">
-        <input type="submit" value="Book Ticket">
-    </td>
-</tr>
-
-</table>
-
-</form>
-
-</center>
-
-</body>
+</form>  </body>  
 </html>
