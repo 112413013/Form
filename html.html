@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket Booking Form</title>
+</head>
+<body>
+
+<h2>Ticket Booking Form</h2>
+
+<form action="process.php" method="post">
+
+    Name:
+    <input type="text" name="name" required><br><br>
+
+    Age:
+    <input type="number" name="age" required><br><br>
+
+    Destination:
+    <select name="destination" required>
+        <option value="">--Select Destination--</option>
+        <option>Chennai</option>
+        <option>Bangalore</option>
+        <option>Hyderabad</option>
+    </select><br><br>
+
+    <input type="submit" name="submit" value="Book Ticket">
+
+</form>
+
+</body>
+</html>
